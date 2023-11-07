@@ -4,10 +4,22 @@ export default function AddItem(){
     const [name ,setName] = useState('');
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(0);
+
+    function onAddSubmit(e){
+        e.preventDefault();
+        if(name === '') return;
+        const itemData = {name, quantity, price, id:Date.now().toString()};
+
+        console.log(itemData);
+
+        setName('')
+        setQuantity(1)
+        setPrice(0)
+    }
     return(
         <div>
             <h3>Add Item</h3>
-            <form  className="add-item">
+            <form  className="add-item" onSubmit={onAddSubmit}>
                 <div>
                     <label htmlFor="">Item Name</label>
                     <input type="text" value={name} onChange={(e)=> setName(e.target.value)} />
@@ -15,9 +27,9 @@ export default function AddItem(){
                 <div>
                     <label htmlFor="">Quantity</label>
                     <select value={quantity} onChange={(e)=> setQuantity(e.target.value)}>
-                        <option >1</option>
-                        <option >2</option>
-                        <option >3</option>
+                        {
+                            Array.from({length : 20}, (_,i)=>i+1).map(value=><option key={value} value={value}>{value}</option>)
+                        }
                     </select>
                 </div>
                 <div>
