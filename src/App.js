@@ -8,9 +8,7 @@ function App() {
   return (
     <div>
        <Header/>
-    
-    <div className="continer">
-     
+    <div className="container">
       <AddItem/>
       <ItemsList/>
       <Footer/>

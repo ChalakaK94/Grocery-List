@@ -1,5 +1,12 @@
+import SingleItem from "./SIngleItem";
+
 export default function ItemsList(){
     return(
-        <div>Items list</div>
+        <div >
+            <h3>Item List</h3>
+           <SingleItem/>
+           <SingleItem/>
+
+        </div>
     )
 }
