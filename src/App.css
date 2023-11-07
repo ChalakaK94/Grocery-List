@@ -7,6 +7,10 @@ body{
   font-family:  sans-serif;
   font-size: 20px;
 }
+.continer{
+  width: 90%;
+  margin: auto;
+}
 
 .header{
   padding: 2rem 0;
@@ -26,4 +30,25 @@ body{
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.add-item > div{
+  margin: 1rem 0;
+
+}
+
+.add-item label{
+  display: block;
+}
+
+.add-item input, .add-item select{
+  width: 100%;
+  padding: 10px;
+}
+
+.btn{
+  border: none;
+  background-color: purple;
+  color: white;
+  padding: 10px 15px ;
 }
