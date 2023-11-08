@@ -1,6 +1,6 @@
 import SingleItem from "./SIngleItem";
 
-export default function ItemsList({items,deleteItem}){
+export default function ItemsList({items,deleteItem,itemSelected}){
     if(!items.length) return <h3 style={{textAlign: 'center'}}>Please add items</h3>
 
     const totalPrice = items.reduce((acc,item)=> {
@@ -11,7 +11,7 @@ export default function ItemsList({items,deleteItem}){
         <div >
             <h3>Item List</h3>
             {items.map(item=>(
-                <SingleItem item={item} key={item.id} deleteItem={deleteItem}/>
+                <SingleItem item={item} key={item.id} deleteItem={deleteItem} itemSelected={itemSelected}/>
             ))}
 
             <div className="total">Total Price:${totalPrice}</div>

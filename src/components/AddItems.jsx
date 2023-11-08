@@ -8,7 +8,9 @@ export default function AddItem({addItem}){
     function onAddSubmit(e){
         e.preventDefault();
         if(name === '') return;
-        const itemData = {name, quantity, price, id:Date.now().toString()};
+        const itemData = {name, quantity, price, id:Date.now().toString()
+            ,selected:false};
+        
         addItem(itemData)
         setName('')
         setQuantity(1)
