@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function AddItem(){
+export default function AddItem({addItem}){
     const [name ,setName] = useState('');
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(0);
@@ -9,9 +9,7 @@ export default function AddItem(){
         e.preventDefault();
         if(name === '') return;
         const itemData = {name, quantity, price, id:Date.now().toString()};
-
-        console.log(itemData);
-
+        addItem(itemData)
         setName('')
         setQuantity(1)
         setPrice(0)

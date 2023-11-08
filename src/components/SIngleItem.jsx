@@ -1,8 +1,9 @@
-export default function SingleItem(){
+export default function SingleItem({item}){
     return(
         <div className="item">
-        <div>1</div>
-        <div>40$</div>
+        <div>{item.name}</div>
+        <div>{item.quantity}</div>
+        <div>${item.price}</div>
     </div>
     )
 }
