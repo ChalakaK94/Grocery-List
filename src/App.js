@@ -11,12 +11,19 @@ function App() {
   function addItem(item){
     setItems(items=> [...items,item])
   }
+
+  function deleteItem(id){
+    setItems(items=> {
+      return items.filter(item=> item.id !== id);
+    })
+
+  }
   return (
     <div>
        <Header/>
     <div className="container">
       <AddItem addItem={addItem} />
-      <ItemsList items={items}/>
+      <ItemsList items={items} deleteItem={deleteItem}/>
       <Footer/>
       
     </div>
