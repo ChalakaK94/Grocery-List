@@ -11,6 +11,7 @@ body {
 .container {
   width: 90%;
   margin: auto;
+  height: 100vh;
 }
 
 .header {
@@ -58,4 +59,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.total{
+  text-align: end;
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 20px;
 }

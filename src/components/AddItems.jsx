@@ -31,7 +31,7 @@ export default function AddItem({addItem}){
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="">Price</label>
+                    <label htmlFor="">Price per Quantity</label>
                     <input type="number" value={price} onChange={(e)=>setPrice(e.target.value)} />
                 </div>
                 <div>
